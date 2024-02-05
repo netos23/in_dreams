@@ -22,3 +22,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IN_DREAMS_34EEB }}'
           channelId: live
           projectId: in-dreams-34eeb
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
+
