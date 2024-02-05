@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399284204047",
+    "project_id": "in-dreams-34eeb",
+    "storage_bucket": "in-dreams-34eeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399284204047:android:9957e63d7984f34ba6297a",
+        "android_client_info": {
+          "package_name": "ru.fbtw.in_dreams"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGmOkfdpcHHjZe3LIUqS5IeYzQdKXTdEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
