@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'dream.dart';
+part of 'dream_template.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,15 +14,15 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Dream _$DreamFromJson(Map<String, dynamic> json) {
-  return _Dream.fromJson(json);
+DreamTemplate _$DreamTemplateFromJson(Map<String, dynamic> json) {
+  return _DreamTemplate.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Dream {
-  String get id => throw _privateConstructorUsedError;
+mixin _$DreamTemplate {
+  String? get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  List<Item> get items => throw _privateConstructorUsedError;
+  List<ItemTemplate> get items => throw _privateConstructorUsedError;
   DateTime get originalDay => throw _privateConstructorUsedError;
   DateTime? get celebrationDay => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -30,18 +30,20 @@ mixin _$Dream {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DreamCopyWith<Dream> get copyWith => throw _privateConstructorUsedError;
+  $DreamTemplateCopyWith<DreamTemplate> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DreamCopyWith<$Res> {
-  factory $DreamCopyWith(Dream value, $Res Function(Dream) then) =
-      _$DreamCopyWithImpl<$Res, Dream>;
+abstract class $DreamTemplateCopyWith<$Res> {
+  factory $DreamTemplateCopyWith(
+          DreamTemplate value, $Res Function(DreamTemplate) then) =
+      _$DreamTemplateCopyWithImpl<$Res, DreamTemplate>;
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       String name,
-      List<Item> items,
+      List<ItemTemplate> items,
       DateTime originalDay,
       DateTime? celebrationDay,
       String? description,
@@ -49,9 +51,9 @@ abstract class $DreamCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DreamCopyWithImpl<$Res, $Val extends Dream>
-    implements $DreamCopyWith<$Res> {
-  _$DreamCopyWithImpl(this._value, this._then);
+class _$DreamTemplateCopyWithImpl<$Res, $Val extends DreamTemplate>
+    implements $DreamTemplateCopyWith<$Res> {
+  _$DreamTemplateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -61,7 +63,7 @@ class _$DreamCopyWithImpl<$Res, $Val extends Dream>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? items = null,
     Object? originalDay = null,
@@ -70,10 +72,10 @@ class _$DreamCopyWithImpl<$Res, $Val extends Dream>
     Object? picture = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -81,7 +83,7 @@ class _$DreamCopyWithImpl<$Res, $Val extends Dream>
       items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
-              as List<Item>,
+              as List<ItemTemplate>,
       originalDay: null == originalDay
           ? _value.originalDay
           : originalDay // ignore: cast_nullable_to_non_nullable
@@ -103,16 +105,17 @@ class _$DreamCopyWithImpl<$Res, $Val extends Dream>
 }
 
 /// @nodoc
-abstract class _$$DreamImplCopyWith<$Res> implements $DreamCopyWith<$Res> {
-  factory _$$DreamImplCopyWith(
-          _$DreamImpl value, $Res Function(_$DreamImpl) then) =
-      __$$DreamImplCopyWithImpl<$Res>;
+abstract class _$$DreamTemplateImplCopyWith<$Res>
+    implements $DreamTemplateCopyWith<$Res> {
+  factory _$$DreamTemplateImplCopyWith(
+          _$DreamTemplateImpl value, $Res Function(_$DreamTemplateImpl) then) =
+      __$$DreamTemplateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       String name,
-      List<Item> items,
+      List<ItemTemplate> items,
       DateTime originalDay,
       DateTime? celebrationDay,
       String? description,
@@ -120,17 +123,17 @@ abstract class _$$DreamImplCopyWith<$Res> implements $DreamCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$DreamImplCopyWithImpl<$Res>
-    extends _$DreamCopyWithImpl<$Res, _$DreamImpl>
-    implements _$$DreamImplCopyWith<$Res> {
-  __$$DreamImplCopyWithImpl(
-      _$DreamImpl _value, $Res Function(_$DreamImpl) _then)
+class __$$DreamTemplateImplCopyWithImpl<$Res>
+    extends _$DreamTemplateCopyWithImpl<$Res, _$DreamTemplateImpl>
+    implements _$$DreamTemplateImplCopyWith<$Res> {
+  __$$DreamTemplateImplCopyWithImpl(
+      _$DreamTemplateImpl _value, $Res Function(_$DreamTemplateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? items = null,
     Object? originalDay = null,
@@ -138,11 +141,11 @@ class __$$DreamImplCopyWithImpl<$Res>
     Object? description = freezed,
     Object? picture = freezed,
   }) {
-    return _then(_$DreamImpl(
-      id: null == id
+    return _then(_$DreamTemplateImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -150,7 +153,7 @@ class __$$DreamImplCopyWithImpl<$Res>
       items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
-              as List<Item>,
+              as List<ItemTemplate>,
       originalDay: null == originalDay
           ? _value.originalDay
           : originalDay // ignore: cast_nullable_to_non_nullable
@@ -173,27 +176,27 @@ class __$$DreamImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$DreamImpl implements _Dream {
-  const _$DreamImpl(
-      {required this.id,
+class _$DreamTemplateImpl implements _DreamTemplate {
+  const _$DreamTemplateImpl(
+      {this.id,
       required this.name,
-      required final List<Item> items,
+      required final List<ItemTemplate> items,
       required this.originalDay,
       this.celebrationDay,
       this.description,
       this.picture})
       : _items = items;
 
-  factory _$DreamImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DreamImplFromJson(json);
+  factory _$DreamTemplateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DreamTemplateImplFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String name;
-  final List<Item> _items;
+  final List<ItemTemplate> _items;
   @override
-  List<Item> get items {
+  List<ItemTemplate> get items {
     if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_items);
@@ -210,14 +213,14 @@ class _$DreamImpl implements _Dream {
 
   @override
   String toString() {
-    return 'Dream(id: $id, name: $name, items: $items, originalDay: $originalDay, celebrationDay: $celebrationDay, description: $description, picture: $picture)';
+    return 'DreamTemplate(id: $id, name: $name, items: $items, originalDay: $originalDay, celebrationDay: $celebrationDay, description: $description, picture: $picture)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DreamImpl &&
+            other is _$DreamTemplateImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._items, _items) &&
@@ -245,35 +248,36 @@ class _$DreamImpl implements _Dream {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DreamImplCopyWith<_$DreamImpl> get copyWith =>
-      __$$DreamImplCopyWithImpl<_$DreamImpl>(this, _$identity);
+  _$$DreamTemplateImplCopyWith<_$DreamTemplateImpl> get copyWith =>
+      __$$DreamTemplateImplCopyWithImpl<_$DreamTemplateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DreamImplToJson(
+    return _$$DreamTemplateImplToJson(
       this,
     );
   }
 }
 
-abstract class _Dream implements Dream {
-  const factory _Dream(
-      {required final String id,
+abstract class _DreamTemplate implements DreamTemplate {
+  const factory _DreamTemplate(
+      {final String? id,
       required final String name,
-      required final List<Item> items,
+      required final List<ItemTemplate> items,
       required final DateTime originalDay,
       final DateTime? celebrationDay,
       final String? description,
-      final String? picture}) = _$DreamImpl;
+      final String? picture}) = _$DreamTemplateImpl;
 
-  factory _Dream.fromJson(Map<String, dynamic> json) = _$DreamImpl.fromJson;
+  factory _DreamTemplate.fromJson(Map<String, dynamic> json) =
+      _$DreamTemplateImpl.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String get name;
   @override
-  List<Item> get items;
+  List<ItemTemplate> get items;
   @override
   DateTime get originalDay;
   @override
@@ -284,6 +288,6 @@ abstract class _Dream implements Dream {
   String? get picture;
   @override
   @JsonKey(ignore: true)
-  _$$DreamImplCopyWith<_$DreamImpl> get copyWith =>
+  _$$DreamTemplateImplCopyWith<_$DreamTemplateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

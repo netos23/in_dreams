@@ -1,16 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'dream.dart';
+part of 'dream_template.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DreamImpl _$$DreamImplFromJson(Map<String, dynamic> json) => _$DreamImpl(
-      id: json['id'] as String,
+_$DreamTemplateImpl _$$DreamTemplateImplFromJson(Map<String, dynamic> json) =>
+    _$DreamTemplateImpl(
+      id: json['id'] as String?,
       name: json['name'] as String,
       items: (json['items'] as List<dynamic>)
-          .map((e) => Item.fromJson(e as Map<String, dynamic>))
+          .map((e) => ItemTemplate.fromJson(e as Map<String, dynamic>))
           .toList(),
       originalDay: DateTime.parse(json['originalDay'] as String),
       celebrationDay: json['celebrationDay'] == null
@@ -20,7 +21,7 @@ _$DreamImpl _$$DreamImplFromJson(Map<String, dynamic> json) => _$DreamImpl(
       picture: json['picture'] as String?,
     );
 
-Map<String, dynamic> _$$DreamImplToJson(_$DreamImpl instance) =>
+Map<String, dynamic> _$$DreamTemplateImplToJson(_$DreamTemplateImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

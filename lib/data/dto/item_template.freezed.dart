@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'item.dart';
+part of 'item_template.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Item _$ItemFromJson(Map<String, dynamic> json) {
-  return _Item.fromJson(json);
+ItemTemplate _$ItemTemplateFromJson(Map<String, dynamic> json) {
+  return _ItemTemplate.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Item {
-  String get id => throw _privateConstructorUsedError;
+mixin _$ItemTemplate {
+  String? get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   Priority? get priority => throw _privateConstructorUsedError;
@@ -30,16 +30,18 @@ mixin _$Item {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ItemCopyWith<Item> get copyWith => throw _privateConstructorUsedError;
+  $ItemTemplateCopyWith<ItemTemplate> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ItemCopyWith<$Res> {
-  factory $ItemCopyWith(Item value, $Res Function(Item) then) =
-      _$ItemCopyWithImpl<$Res, Item>;
+abstract class $ItemTemplateCopyWith<$Res> {
+  factory $ItemTemplateCopyWith(
+          ItemTemplate value, $Res Function(ItemTemplate) then) =
+      _$ItemTemplateCopyWithImpl<$Res, ItemTemplate>;
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       String name,
       String? description,
       Priority? priority,
@@ -49,9 +51,9 @@ abstract class $ItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ItemCopyWithImpl<$Res, $Val extends Item>
-    implements $ItemCopyWith<$Res> {
-  _$ItemCopyWithImpl(this._value, this._then);
+class _$ItemTemplateCopyWithImpl<$Res, $Val extends ItemTemplate>
+    implements $ItemTemplateCopyWith<$Res> {
+  _$ItemTemplateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -61,7 +63,7 @@ class _$ItemCopyWithImpl<$Res, $Val extends Item>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? description = freezed,
     Object? priority = freezed,
@@ -70,10 +72,10 @@ class _$ItemCopyWithImpl<$Res, $Val extends Item>
     Object? picture = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -103,14 +105,15 @@ class _$ItemCopyWithImpl<$Res, $Val extends Item>
 }
 
 /// @nodoc
-abstract class _$$ItemImplCopyWith<$Res> implements $ItemCopyWith<$Res> {
-  factory _$$ItemImplCopyWith(
-          _$ItemImpl value, $Res Function(_$ItemImpl) then) =
-      __$$ItemImplCopyWithImpl<$Res>;
+abstract class _$$ItemTemplateImplCopyWith<$Res>
+    implements $ItemTemplateCopyWith<$Res> {
+  factory _$$ItemTemplateImplCopyWith(
+          _$ItemTemplateImpl value, $Res Function(_$ItemTemplateImpl) then) =
+      __$$ItemTemplateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       String name,
       String? description,
       Priority? priority,
@@ -120,16 +123,17 @@ abstract class _$$ItemImplCopyWith<$Res> implements $ItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ItemImplCopyWithImpl<$Res>
-    extends _$ItemCopyWithImpl<$Res, _$ItemImpl>
-    implements _$$ItemImplCopyWith<$Res> {
-  __$$ItemImplCopyWithImpl(_$ItemImpl _value, $Res Function(_$ItemImpl) _then)
+class __$$ItemTemplateImplCopyWithImpl<$Res>
+    extends _$ItemTemplateCopyWithImpl<$Res, _$ItemTemplateImpl>
+    implements _$$ItemTemplateImplCopyWith<$Res> {
+  __$$ItemTemplateImplCopyWithImpl(
+      _$ItemTemplateImpl _value, $Res Function(_$ItemTemplateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? description = freezed,
     Object? priority = freezed,
@@ -137,11 +141,11 @@ class __$$ItemImplCopyWithImpl<$Res>
     Object? price = freezed,
     Object? picture = freezed,
   }) {
-    return _then(_$ItemImpl(
-      id: null == id
+    return _then(_$ItemTemplateImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -172,9 +176,9 @@ class __$$ItemImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ItemImpl implements _Item {
-  const _$ItemImpl(
-      {required this.id,
+class _$ItemTemplateImpl implements _ItemTemplate {
+  const _$ItemTemplateImpl(
+      {this.id,
       required this.name,
       this.description,
       this.priority,
@@ -182,11 +186,11 @@ class _$ItemImpl implements _Item {
       this.price,
       this.picture});
 
-  factory _$ItemImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ItemImplFromJson(json);
+  factory _$ItemTemplateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ItemTemplateImplFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String name;
   @override
@@ -202,14 +206,14 @@ class _$ItemImpl implements _Item {
 
   @override
   String toString() {
-    return 'Item(id: $id, name: $name, description: $description, priority: $priority, link: $link, price: $price, picture: $picture)';
+    return 'ItemTemplate(id: $id, name: $name, description: $description, priority: $priority, link: $link, price: $price, picture: $picture)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ItemImpl &&
+            other is _$ItemTemplateImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
@@ -229,31 +233,32 @@ class _$ItemImpl implements _Item {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ItemImplCopyWith<_$ItemImpl> get copyWith =>
-      __$$ItemImplCopyWithImpl<_$ItemImpl>(this, _$identity);
+  _$$ItemTemplateImplCopyWith<_$ItemTemplateImpl> get copyWith =>
+      __$$ItemTemplateImplCopyWithImpl<_$ItemTemplateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ItemImplToJson(
+    return _$$ItemTemplateImplToJson(
       this,
     );
   }
 }
 
-abstract class _Item implements Item {
-  const factory _Item(
-      {required final String id,
+abstract class _ItemTemplate implements ItemTemplate {
+  const factory _ItemTemplate(
+      {final String? id,
       required final String name,
       final String? description,
       final Priority? priority,
       final String? link,
       final double? price,
-      final String? picture}) = _$ItemImpl;
+      final String? picture}) = _$ItemTemplateImpl;
 
-  factory _Item.fromJson(Map<String, dynamic> json) = _$ItemImpl.fromJson;
+  factory _ItemTemplate.fromJson(Map<String, dynamic> json) =
+      _$ItemTemplateImpl.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String get name;
   @override
@@ -268,6 +273,6 @@ abstract class _Item implements Item {
   String? get picture;
   @override
   @JsonKey(ignore: true)
-  _$$ItemImplCopyWith<_$ItemImpl> get copyWith =>
+  _$$ItemTemplateImplCopyWith<_$ItemTemplateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

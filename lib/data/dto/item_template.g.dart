@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'item.dart';
+part of 'item_template.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ItemImpl _$$ItemImplFromJson(Map<String, dynamic> json) => _$ItemImpl(
-      id: json['id'] as String,
+_$ItemTemplateImpl _$$ItemTemplateImplFromJson(Map<String, dynamic> json) =>
+    _$ItemTemplateImpl(
+      id: json['id'] as String?,
       name: json['name'] as String,
       description: json['description'] as String?,
       priority: $enumDecodeNullable(_$PriorityEnumMap, json['priority']),
@@ -16,7 +17,7 @@ _$ItemImpl _$$ItemImplFromJson(Map<String, dynamic> json) => _$ItemImpl(
       picture: json['picture'] as String?,
     );
 
-Map<String, dynamic> _$$ItemImplToJson(_$ItemImpl instance) =>
+Map<String, dynamic> _$$ItemTemplateImplToJson(_$ItemTemplateImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
